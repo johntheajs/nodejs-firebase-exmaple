@@ -9,12 +9,12 @@ export default function Home() {
 	const [user, loading, error] = useAuthState(auth);
 
 	if (user != null) {
-		redirect('/user');
+		redirect('/user/dashboard');
 	}
 
 	const uiconfig = {
 		signInFlow: 'popup',
-		signInSuccessUrl: '/user',
+		signInSuccessUrl: '/user/dashboard',
 		signInOptions: [GoogleAuthProvider.PROVIDER_ID],
 	};
 
