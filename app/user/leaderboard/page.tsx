@@ -43,7 +43,7 @@ const getData = async (user: any) => {
 		const request = await fetch(
 			`https://geeksforgeeks-api.vercel.app/get/${user.gfgUsername}`,
 			{
-				next: { revalidate: 3600 },
+				next: { revalidate: 5 },
 			},
 		);
 		const response = await request.json();
