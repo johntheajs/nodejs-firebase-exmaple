@@ -4,6 +4,7 @@ export interface User {
 	email: string | null;
 	photoURL: string | null;
 	regNo?: string | null;
+	year?: string | null;
 	leetcodeUsername?: string;
 	gfgUsername?: string;
 	totalProblems?: number;

@@ -7,7 +7,7 @@ const Sidebar = () => {
 			<aside className="w-64" aria-label="Sidebar">
 				<div className="px-3 py-4 h-screen overflow-y-auto rounded bg-gray-50 dark:bg-gray-800">
 					<ul className="space-y-2 flex flex-col h-full">
-						<li>
+						{/* <li>
 							<a
 								href="#"
 								className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
@@ -23,8 +23,8 @@ const Sidebar = () => {
 								</svg>
 								<span className="ml-3">Dashboard</span>
 							</a>
-						</li>
-						<li>
+						</li> */}
+						{/* <li>
 							<a
 								href="#"
 								className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
@@ -43,7 +43,7 @@ const Sidebar = () => {
 								</svg>
 								<span className="flex-1 ml-3 whitespace-nowrap">Users</span>
 							</a>
-						</li>
+						</li> */}
 						<li>
 							<a
 								href="/user/leaderboard"
@@ -68,7 +68,7 @@ const Sidebar = () => {
 						</li>
 						<li>
 							<a
-								href="#"
+								href="/user/editProfile"
 								className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
 							>
 								<svg
@@ -83,7 +83,7 @@ const Sidebar = () => {
 										clipRule="evenodd"
 									></path>
 								</svg>
-								<span className="flex-1 ml-3 whitespace-nowrap">Profile</span>
+								<span className="flex-1 ml-3 whitespace-nowrap">Edit Profile</span>
 							</a>
 						</li>
 						<li className="flex-1"></li>
