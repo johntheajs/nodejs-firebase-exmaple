@@ -17,6 +17,7 @@ const CompleteRegistration = () => {
 		email: '',
 		photoURL: '',
 		leetcodeUsername: '',
+		codechefUsername: '',
 		gfgUsername: '',
 		language: '',
 		regNo: '',
@@ -38,6 +39,7 @@ const CompleteRegistration = () => {
 						email: currUser.email || '',
 						photoURL: currUser.photoURL || '',
 						leetcodeUsername: currUser.leetcodeUsername || '',
+						codechefUsername: currUser.codechefUsername || '',
 						gfgUsername: currUser.gfgUsername || '',
 						language: currUser.language || '',
 						regNo: currUser.regNo || '',
@@ -52,6 +54,7 @@ const CompleteRegistration = () => {
 				email: currUser.email || '',
 				photoURL: currUser.photoURL || '',
 				leetcodeUsername: currUser.leetcodeUsername || '',
+				codechefUsername: currUser.codechefUsername || '',
 				gfgUsername: currUser.gfgUsername || '',
 				language: currUser.language || '',
 				regNo: currUser.regNo || '',
@@ -143,6 +146,19 @@ const CompleteRegistration = () => {
 							value={formData?.leetcodeUsername || ''}
 							onChange={handleChange}
 							required
+							className="w-full input input-bordered rounded shadow-sm focus:outline-none focus:ring focus:border-blue-500"
+						/>
+					</div>
+					<div className="space-y-2">
+						<label htmlFor="gfgUsername" className="block text-sm font-medium">
+							CodeChef Username:
+						</label>
+						<input
+							type="text"
+							id="codechefUsername"
+							name="codechefUsername"
+							value={formData?.codechefUsername || ''}
+							onChange={handleChange}
 							className="w-full input input-bordered rounded shadow-sm focus:outline-none focus:ring focus:border-blue-500"
 						/>
 					</div>

@@ -9,7 +9,7 @@ export default function Home() {
 	const [user, loading, error] = useAuthState(auth);
 
 	if (user != null) {
-		redirect('/user/dashboard');
+		redirect('/user/leaderboard');
 	}
 
 	const uiconfig = {
