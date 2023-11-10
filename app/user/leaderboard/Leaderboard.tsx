@@ -79,7 +79,7 @@ const Leaderboard = ({ userData }: { userData: any[] }) => {
 						<th className="p-2 border border-gray-300">Rank</th>
 						<th className="p-2 border border-gray-300">Name</th>
 						<th className="p-2 border border-gray-300">Reg No</th>
-
+						<th className="p-2 border border-gray-300">Year</th>
 						<th className="p-2 border border-gray-300">Language</th>
 						<th className="p-2 border border-gray-300">
 							Total Problems Solved
