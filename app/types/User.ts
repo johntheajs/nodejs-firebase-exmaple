@@ -6,6 +6,7 @@ export interface User {
 	regNo?: string | null;
 	year?: string | null;
 	leetcodeUsername?: string;
+	codechefUsername?: string;
 	gfgUsername?: string;
 	totalProblems?: number;
 	problemsToday?: number;

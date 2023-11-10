@@ -5,6 +5,7 @@ const Leaderboard = ({ userData }: { userData: any[] }) => {
 	const [filter, setFilter] = useState('total');
 	const [ascending, setAscending] = useState(true);
 	const [selectedLanguage, setSelectedLanguage] = useState('All'); // Default filter by All languages
+	const [selectedYear, setSelectedYear] = useState('All'); // Default filter by All languages
 
 	const filteredAndSortedData = userData
 		.filter((user) =>
@@ -18,8 +19,8 @@ const Leaderboard = ({ userData }: { userData: any[] }) => {
 			}
 		});
 
-	const languageOptions = ['All', 'C++', 'Java', 'JavaScript', 'Python']; // Add more languages as needed
-
+	const languageOptions = ['All', 'C', 'C++', 'Java', 'Python']; // Add more languages as needed
+	const yearOptions = ['I','II','III','IV']
 	return (
 		<div className="p-4">
 			<div className="mb-4 flex items-center">
@@ -31,6 +32,8 @@ const Leaderboard = ({ userData }: { userData: any[] }) => {
 					<option value="total">Total Problems Solved</option>
 					<option value="easy">Easy Problems Solved</option>
 					<option value="medium">Medium Problems Solved</option>
+					<option value="hard">Hard Problems Solved</option>
+				
 				</select>
 				<button
 					className="ml-2 px-2 py-1 bg-blue-500 text-white rounded"
@@ -38,6 +41,21 @@ const Leaderboard = ({ userData }: { userData: any[] }) => {
 				>
 					{ascending ? 'Sort Ascending' : 'Sort Descending'}
 				</button>
+			</div>
+
+			<div className="mb-4">
+				<label className="mr-2">Filter by Year:</label>
+				<select
+					className="border rounded px-2 py-1"
+					value={selectedYear}
+					onChange={(e) => setSelectedYear(e.target.value)}
+				>
+					{yearOptions.map((year) => (
+						<option key={year} value={year}>
+							{year}
+						</option>
+					))}
+				</select>
 			</div>
 
 			<div className="mb-4">
@@ -74,7 +92,7 @@ const Leaderboard = ({ userData }: { userData: any[] }) => {
 							<td className="p-2 border border-gray-300">{index + 1}</td>
 							<td className="p-2 border border-gray-300">{user.displayName}</td>
 							<td className="p-2 border border-gray-300">{user.regNo}</td>
-
+							<td className="p-2 border border-gray-300">{user.year}</td>
 							<td className="p-2 border border-gray-300">{user.language}</td>
 							<td className="p-2 border border-gray-300">
 								{user.data[filter]}

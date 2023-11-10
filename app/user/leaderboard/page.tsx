@@ -55,6 +55,21 @@ const getData = async (user: any) => {
 		data.basic += response.problems.basic.count;
 		data.score += response.overall_coding_score;
 	}
+	if (user.codechefUsername !== '') {
+		const request = await fetch(
+			`https://codechef-api-peach.vercel.app/get/${user.codechefUsername}`,
+			{
+				next: { revalidate: 5 },
+			},
+		);
+		const response = await request.json();
+		data.total += response.total_problems_solved;
+		data.easy += response.problems.easy.count;
+		data.medium += response.problems.medium.count;
+		data.hard += response.problems.hard.count;
+		data.school += response.problems.school.count;
+		data.basic += response.problems.basic.count;
+	}
 	return { ...user, data: data };
 };
 
