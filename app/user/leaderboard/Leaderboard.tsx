@@ -11,6 +11,9 @@ const Leaderboard = ({ userData }: { userData: any[] }) => {
 		.filter((user) =>
 			selectedLanguage === 'All' ? true : user.language === selectedLanguage,
 		)
+		.filter((user) =>
+		selectedYear === 'All' ? true : user.year === selectedYear,
+	)
 		.sort((a, b) => {
 			if (ascending) {
 				return a.data[filter] - b.data[filter];
@@ -20,7 +23,7 @@ const Leaderboard = ({ userData }: { userData: any[] }) => {
 		});
 
 	const languageOptions = ['All', 'C', 'C++', 'Java', 'Python']; // Add more languages as needed
-	const yearOptions = ['I','II','III','IV']
+	const yearOptions = ['All','I','II','III','IV']
 	return (
 		<div className="p-4">
 			<div className="mb-4 flex items-center">

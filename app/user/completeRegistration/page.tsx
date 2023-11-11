@@ -179,7 +179,7 @@ const CompleteRegistration = () => {
 						<label htmlFor="language" className="block text-sm font-medium">
 							Preferred Programming Language:
 						</label>
-						<select id= "language" name="language" value={formData?.language || ''}
+						<select id= "language" name="language" value={formData?.language || 'C++'}
 							onChange={handleSelectChange}
 							className="w-full input input-bordered rounded shadow-sm focus:outline-none focus:ring focus:border-blue-500"
 						>
@@ -204,12 +204,12 @@ const CompleteRegistration = () => {
 							onChange={handleChange}
 							className="w-full input input-bordered rounded shadow-sm focus:outline-none focus:ring focus:border-blue-500"
 						/>
-					</div>
+					</div>year
 					<div className="space-y-2">
 						<label htmlFor="year" className="block text-sm font-medium">
 							Year:
 						</label>
-						<select id= "year" name="year" value={formData?.year || ''}
+						<select id= "year" name="year" value={formData?.year || 'I'}
 							onChange={handleSelectChange}
 							className="w-full input input-bordered rounded shadow-sm focus:outline-none focus:ring focus:border-blue-500"
 						>
@@ -217,8 +217,6 @@ const CompleteRegistration = () => {
 							<option value="II">II</option>
 							<option value="III">III</option>
 							<option value="IV">IV</option>
-
-
 						</select>
 							
 					</div>
