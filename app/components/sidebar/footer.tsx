@@ -44,7 +44,7 @@ const SideBarFooter = () => {
 						src={currUser.photoURL}
 						alt="profile"
 					/>
-					<div>
+					<div className='text-black hover:text-white'>
 						<h1>{currUser.displayName}</h1>
 						<button
 							className="flex-1 flex flex-row gap-2 ml-3 whitespace-nowrap"
