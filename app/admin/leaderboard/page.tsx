@@ -1,7 +1,7 @@
 import { firestore } from '@/config/firebase';
 import { collection, getDocs } from 'firebase/firestore';
 import React from 'react';
-import LeaderboardTable from './Leaderboard';
+import LeaderboardTable from '../../user/leaderboard/Leaderboard';
 
 interface ProblemsData {
 	total: number;
