@@ -12,12 +12,12 @@ interface FirebaseConfig {
 }
 
 const firebaseConfig: FirebaseConfig = {
-	apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY || '',
-	authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH || '',
-	projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || '',
-	storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET || '',
-	messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID || '',
-	appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID || '',
+  apiKey: "AIzaSyCtmuwlRJdj9wdXReW9OiFfgI9BbTN5VSk",
+  authDomain: "cp-stats-20608.firebaseapp.com",
+  projectId: "cp-stats-20608",
+  storageBucket: "cp-stats-20608.appspot.com",
+  messagingSenderId: "449445469404",
+  appId: "1:449445469404:web:2a7376284f4cdf480a6819",
 };
 
 const firebase = initializeApp(firebaseConfig);
